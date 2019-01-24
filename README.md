@@ -1,8 +1,8 @@
 # docker_django_tutorial
 
 ## What's needed?
-https://docs.djangoproject.com/en/2.1/
-https://docs.docker.com/compose/gettingstarted/
+* https://docs.djangoproject.com/en/2.1/
+* https://docs.docker.com/compose/gettingstarted/
 
 ## On Ubuntu
 ```shell
