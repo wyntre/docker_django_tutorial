@@ -5,18 +5,26 @@ https://docs.djangoproject.com/en/2.1/
 https://docs.docker.com/compose/gettingstarted/
 
 ## On Ubuntu
+```shell
 sudo apt install python3 python3-pip
 sudo pip3 install pipenv
+```
 
 ## In the repositiory directory
+```shell
 pipenv --three --python $(python3 --version | awk '{ print $2 }')
 pipenv install django
+```
 
 ### Verify django
+```shell
 python -m django --version
+```
 
 ## Enter virtual environment
+```shell
 pipenv shell
+```
 
 Follow https://docs.djangoproject.com/en/2.1/intro/tutorial01/
 
@@ -24,7 +32,7 @@ Once you can reach the server at http://localhost:8000, let's move this over to 
 
 ## Adding Docker
 Create Dockerfile
-```
+```dockerfile
 FROM python:3.6.7-alpine
 
 COPY mysite/requirements.txt /
