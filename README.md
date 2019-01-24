@@ -14,6 +14,7 @@ sudo pip3 install pipenv
 ```shell
 pipenv --three --python $(python3 --version | awk '{ print $2 }')
 pipenv install django
+pipenv lock -r > requirements.txt
 ```
 
 ### Verify django
