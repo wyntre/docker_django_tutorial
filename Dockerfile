@@ -1,10 +1,13 @@
 FROM python:3.6.7-alpine
 
-COPY requirements.txt /
-RUN pip install -r /requirements.txt
+COPY Pipfile /
+COPY Pipfile.lock /
+RUN apk add gcc musl-dev postgresql-dev \
+    && pip install pipenv \
+    && pipenv install --deploy --system \
+    && apk del gcc musl-dev postgresql-dev
 
 WORKDIR /app
-COPY mysite/ .
+COPY ./mysite/ .
 
-EXPOSE 8000
-CMD ["python","manage.py","runserver","0.0.0.0:8000"]
+COPY ./django-start.sh /usr/local/bin/
