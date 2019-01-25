@@ -5,7 +5,7 @@
 * https://docs.docker.com/compose/gettingstarted/
 
 ## Django Tutorial
-https://docs.djangoproject.com/en/2.1/intro/tutorial03/
+https://docs.djangoproject.com/en/2.1/intro/tutorial04/
 
 ## Docker
 No changes need for docker files.
