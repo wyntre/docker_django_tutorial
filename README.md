@@ -81,7 +81,7 @@ python manage.py runserver 0.0.0.0:8000
 version: '3'
 services:
   db:
-    image: postgres
+    image: postgres:alpine
   mysite:
     build: .
     command: django-start.sh
