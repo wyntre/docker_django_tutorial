@@ -2,7 +2,7 @@ FROM python:3.6.7-alpine
 
 COPY Pipfile /
 COPY Pipfile.lock /
-RUN apk add gcc musl-dev postgresql-dev \
+RUN apk add gcc musl-dev libpq postgresql-dev \
     && pip install pipenv \
     && pipenv install --deploy --system \
     && apk del gcc musl-dev postgresql-dev
