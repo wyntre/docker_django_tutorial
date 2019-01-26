@@ -82,13 +82,17 @@ version: '3'
 services:
   db:
     image: postgres:alpine
+    network_mode: bridge
   mysite:
     build: .
     command: django-start.sh
+    network_mode: bridge
     ports:
       - "8000:8000"
     volumes:
       - ./mysite:/app
+    links:
+      - db
     depends_on:
       - db
 ```
